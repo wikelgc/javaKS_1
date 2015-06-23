@@ -14,7 +14,9 @@ import tools.StaticTool;
 import bean.HeroBean;
 import bean.MineLable;
 
+//创建一个监听器类 使用鼠标监听器的接口
 public class Listener implements MouseListener {
+	//
 	MineLable[][] mineLable;
 	MainFrame mainFrame;
 	private boolean isDoublePress = false;

@@ -14,6 +14,8 @@ import panel.FaceJPanel;
 import timer.TimerListener;
 import tools.StaticTool;
 
+//JFrame是java中的一个类，它是一个容器，允许程序员把其他组件（Swing 的三个基本构造块：标签、按钮和文本字段）
+//添加到它里面，把它们组织起来，并把它们呈现给用户。
 public class MainFrame extends JFrame {
 	/**
 	 * 

@@ -36,12 +36,12 @@ public class HeroDialog extends JDialog {
 	}
 
 	public JPanel getPanel() {
-		textArea.setEditable(false);
-		textArea.setLineWrap(true);
+		textArea.setEditable(false);//使调用这个函数的控件不能被编辑
+		textArea.setLineWrap(true);//TextArea设置为自动换行
 
-		JScrollPane scrollPane = new JScrollPane(textArea);
+		JScrollPane scrollPane = new JScrollPane(textArea);//让textArea有滚动条
 		addMessage();
-		panel = new JPanel(new BorderLayout());
+		panel = new JPanel(new BorderLayout());//BorderLayout边界布局管理器
 		panel.add(scrollPane);
 		return panel;
 	}
