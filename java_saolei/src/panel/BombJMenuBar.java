@@ -77,20 +77,27 @@ public class BombJMenuBar extends JMenuBar {
 			}
 		});
 
-		menuGame.addSeparator();// 菜单加入分割线
-
-		menuGame.add(menuItemC);//把游戏-初级加入菜单栏中
+		// 菜单加入分割线
+		menuGame.addSeparator();
+		//把游戏-初级加入菜单栏中
+		menuGame.add(menuItemC);
+		//添加监听器
 		menuItemC.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				//设置扫雷行数为9
 				StaticTool.allrow = 9;
+				//设置扫扫雷列数为9
 				StaticTool.allcol = 9;
+				//设置默认的地雷数为10
 				StaticTool.allcount = 10;
+				//重新开始游戏
 				mainFrame.reStartGame();
 			}
 		});
-
+		
+		//把游戏-初级加入菜单栏中
 		menuGame.add(menuItemZ);
 		menuItemZ.addActionListener(new ActionListener() {
 
@@ -114,24 +121,31 @@ public class BombJMenuBar extends JMenuBar {
 				mainFrame.reStartGame();
 			}
 		});
-		menuGame.addSeparator();// 菜单加入分割线
+		
+		// 菜单加入分割线
+		menuGame.addSeparator();
+		//菜单加入自定义菜单项
 		menuGame.add(menuItemCustom);
+	    //菜单项添加监听器
 		menuItemCustom.addActionListener(new ActionListener() {
-
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				//用户自定义棋盘大小
 				new UserDefinedJDialog(mainFrame);
 
 			}
 		});
 
 		menuGame.addSeparator();// 菜单加入分割线
+		//菜单加入英雄榜菜单项
 		menuGame.add(menuHero);
+		
+		//初级英雄榜
 		menuHero.add(menuHeroC);
 		menuHeroC.addActionListener(new ActionListener() {
-
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				//
 				new HeroDialog(1, mainFrame);
 
 			}
@@ -155,17 +169,21 @@ public class BombJMenuBar extends JMenuBar {
 			}
 		});
 
-		menuGame.addSeparator();// 菜单加入分割线
+		// 菜单加入分割线
+		menuGame.addSeparator();
+		//菜单添加退出按钮
 		menuGame.add(menuItemExit);
 		menuItemExit.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				//
 				System.exit(JFrame.EXIT_ON_CLOSE);
 
 			}
 		});
-
+        
+		//把关于扫雷添加到游戏菜单栏中
 		menuHelp.add(menuItemAbout);
 		menuItemAbout.addActionListener(new ActionListener() {
 
@@ -175,6 +193,7 @@ public class BombJMenuBar extends JMenuBar {
 
 			}
 		});
+		//把外挂添加到游戏菜单栏中
 		menuHelp.add(menuItemHole);
 		menuItemHole.addActionListener(new ActionListener() {
 

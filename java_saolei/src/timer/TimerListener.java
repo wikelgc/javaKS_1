@@ -7,6 +7,7 @@ import tools.StaticTool;
 
 import main.MainFrame;
 
+//时间的监听器
 public class TimerListener implements ActionListener {
 	MainFrame mainFrame;
 
@@ -17,6 +18,7 @@ public class TimerListener implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		StaticTool.timecount++;
+		//时间计时 如果时间大于999，则默认为999
 		if (StaticTool.timecount > 999) {
 			StaticTool.timecount = 999;
 

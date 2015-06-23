@@ -25,10 +25,11 @@ public class FaceJPanel extends JPanel {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	//高级 次数 
 	private JLabel labelCountG = new JLabel();
-
+    //中级 次数
 	private JLabel labelCountS = new JLabel();
-
+	//初级 次数
 	private JLabel labelCountB = new JLabel();
 
 	private JLabel labelTimeG = new JLabel();
@@ -47,14 +48,15 @@ public class FaceJPanel extends JPanel {
 
 	public FaceJPanel(MainFrame frame) {
 		this.mainFrame = frame;
-		this.setLayout(new BorderLayout());
-
+		this.setLayout(new BorderLayout());  //设置布局模式
 		init();
-
 	}
 
+	//设置初始化
 	private void init() {
+		//
 		JPanel panel = new JPanel();
+		//
 		BoxLayout boxLayout = new BoxLayout(panel, BoxLayout.LINE_AXIS);
 		panel.setLayout(boxLayout);
 

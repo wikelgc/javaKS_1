@@ -13,20 +13,24 @@ import main.MainFrame;
 import tools.StaticTool;
 
 import bean.MineLable;
-
+//JPanel 为javax.swing包中的，为面板容器，可以加入到JFrame中 , 它自身是个容器，
+//可以把其他compont加入到JPanel中,如JButton,JTextArea,JTextFiled
 public class BombJPanel extends JPanel {
 	/**
 	 * 
 	 */
+	//serialVersionUID:相当于java类的身份证
 	private static final long serialVersionUID = 1L;
+	
+	//地雷的位置
 	MineLable[][] labels = new MineLable[StaticTool.allrow][StaticTool.allcol];
 	private Listener listener;
 	private MainFrame mainFrame;
 
 	public BombJPanel(MainFrame mainFrame) {
 		this.mainFrame = mainFrame;
-		this.setLayout(new GridLayout(StaticTool.allrow, StaticTool.allcol));
-		init();
+		this.setLayout(new GridLayout(StaticTool.allrow, StaticTool.allcol));//设置布局方式为网格布局
+		init();//初始化
 
 	}
 
